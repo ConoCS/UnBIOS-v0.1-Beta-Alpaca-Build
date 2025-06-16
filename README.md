@@ -43,7 +43,8 @@ I use **QEMU** for testing (yes, I’m pampered 🍼), but I’d love it if some
 3. Compile it into a .img or .bin file. Then run it using an emulator like BOCHS or QEMU (but testing on real hardware is highly recommended to verify if the code actually works).
 
 4. Run it, and feel free to give feedback or submit a pull request to help this project grow!
-** Btw. I'm Assembly beginner :). Sorry if my code looks noobish **
+   
+## **Btw. I'm Assembly beginner :). Sorry if my code looks noobis**
 
 ## 📜 License – GNU General Public License v3.0
 
