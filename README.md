@@ -4,7 +4,7 @@
 
 ## 🔧 What Is This Project?
 
-I'm working on a custom 16-bit BIOS—just for fun... at first.  
+I'm working on a custom 16-bit BIOS. Just for fun... at first.  
 But when I take “just for fun” seriously, who knows? It might turn into something big, right?
 
 This is the **Alpaca Build** of UnBIOS: a passion project combining pure Assembly and a stubborn desire to understand how low-level systems tick.
