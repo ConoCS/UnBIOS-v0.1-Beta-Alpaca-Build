@@ -1,13 +1,13 @@
 # UnBIOS-v0.1-Beta-Alpaca-Build
 
 ---
-# What project is this?
+## What project is this?
 I'm ambitious about creating a custom 16-bit BIOS. Honestly, this project started just for fun. But when I take "just for fun" seriously, who knows—it might turn into something big, right?
 
-# Alpaca?
+## Alpaca?
 I like alpacas :>
 
-# What language is this BIOS written in?
+## What language is this BIOS written in?
 I'm using 100% pure Assembly. However, I’m open to using languages like C in the future (especially for a 64-bit BIOS).
 
 ---
