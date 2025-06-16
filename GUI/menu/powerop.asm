@@ -80,20 +80,25 @@ mov di, password
 debugbuffer: ; debugging is to see if the buffer really works
 lodsb
 cmp al, 0
-je compare
+je compareset
 mov ah, 0x0E
 int 10h
 jmp debugbuffer
+
+compareset:
+mov si, buffer
+mov di, password
 
 compare:
 mov cx, 8
 repe cmpsb
 jz okayset
-jmp halt
+jmp errorset
 
 okayset:
 mov si, 0
 mov si, ok
+; set the cursor so the OK text will readable
 mov ah, 0x02
 mov bh, 0
 mov dh, 0x06
@@ -103,10 +108,56 @@ int 10h
 okay:
 lodsb
 cmp al, 0
-je halt
+je jumplod
 mov ah, 0x0E
 int 10h
 jmp okay
+
+jumplod:
+call wait3sec
+mov al, 'A'
+mov ah, 0x0E
+int 10h
+jmp $
+
+errorset:
+mov si, 0
+mov si, error
+mov ah, 0x02
+mov bh, 0
+mov dh, 0x06
+mov dl, 0x00
+int 10h
+
+errors:
+lodsb
+cmp al, 0
+je wenter
+mov ah, 0x0E
+int 10h
+jmp errors
+
+wenter:
+mov ah, 0x00
+int 16h
+cmp al, 0x0D
+je setup ; restart POP
+jmp wenter
+
+wait3sec:
+    mov ah, 0x00
+    int 0x1A             
+
+    mov bx, dx           
+    add bx, 54           
+
+.waitloop:
+    mov ah, 0x00
+    int 0x1A             
+    cmp dx, bx           
+    jb .waitloop         
+
+    ret
 
 halt:
 jmp $
@@ -115,8 +166,9 @@ info db "! UnBIOS Power On Password Protection !", 0
 msg db "POP Password Expected. Please enter the Password below", 0
 paso db "Password at least more than 8 digit: ", 0
 buffer times 9 db 0  
-password db "12345678"
-ok db "LETS JUMP!!!!!!!!!!!", 0
+password db "12345678", 0
+error db "Password Incorrect. Please try again. Press Enter to restart POP", 0
+ok db "OK", 0
 
 
 times 510 - ($ - $$) db 0
