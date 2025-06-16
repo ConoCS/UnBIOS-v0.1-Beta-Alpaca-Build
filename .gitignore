@@ -1,0 +1,34 @@
+# File image hasil build/test
+*.img
+*.bin
+*.iso
+*.o
+*.elf
+*.map
+*.lst
+
+# File backup editor
+*~
+*.swp
+*.bak
+*.tmp
+
+# Log dan output
+*.log
+*.out
+
+# File QEMU / emulator lainnya
+*.qcow2
+*.vdi
+*.vmdk
+*.nvmem
+*.nvram
+*.sav
+
+# Metadata VSCode / IDE
+.vscode/
+.idea/
+
+# File OS tertentu
+.DS_Store
+Thumbs.db
