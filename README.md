@@ -35,6 +35,16 @@ I use **QEMU** for testing (yes, I’m pampered 🍼), but I’d love it if some
 
 ---
 
+# How to Compile with NASM
+1. Fork or download the source code.
+
+2. Use NASM to compile the .asm file. (Note: The ASM file does not use %include yet.)
+
+3. Compile it into a .img or .bin file. Then run it using an emulator like BOCHS or QEMU (but testing on real hardware is highly recommended to verify if the code actually works).
+
+4. Run it, and feel free to give feedback or submit a pull request to help this project grow!
+** Btw. I'm Assembly beginner :). Sorry if my code looks noobish **
+
 ## 📜 License – GNU General Public License v3.0
 
 This project is licensed under the [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html).
