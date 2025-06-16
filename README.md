@@ -10,6 +10,10 @@ I like alpacas :>
 ## What language is this BIOS written in?
 I'm using 100% pure Assembly. However, I’m open to using languages like C in the future (especially for a 64-bit BIOS).
 
+## Why ORG 0x7C00 and dw 0xAA55 everywhere?
+Because I’m still testing the ASM routines one by one to make sure they actually work on real machines. I use emulators like QEMU (I'm like a pampered baby, yes 🍼) because I can't get other emulators to work properly.
+It would be super helpful if you try running this on a real machine or any emulator that doesn't auto-setup the segment registers. I’d be very grateful to you 🙌🙌🙌
+
 ---
 License – GNU General Public License v3.0
 © 2025 ConoCs
