@@ -5,10 +5,9 @@ setup: ; setup stack before we can run this
 xor ax, ax
 mov ds, ax
 mov es, ax
-mov cs, ax
 mov di, ax
 mov si, ax
-mov sp, 0x07C0
+mov sp, 0x7BFF
 mov cx, 2000
 
 clearscreen: ; clear screen
@@ -184,7 +183,7 @@ jmp $
 
 info db "! UnBIOS Power On Password Protection !", 0
 msg db "POP Password Expected. Please enter the Password below", 0
-paso db "Password at least more than 8 digit: ", 0
+paso db "Password must be at least 8 characters: ", 0
 buffer times 9 db 0  
 password db "12345678", 0
 error db "Password Incorrect. Please try again. Press Enter to restart POP", 0
