@@ -66,14 +66,34 @@ mov cx, 8
 typepass: ; user input will converted to *. and user input data will placed on buffer with stosb
 mov ah, 0x00
 int 16h
+cmp al, 0x08
+je backspace
 stosb
 mov al, 0x2A
 mov ah, 0x0E
 int 10h
 loop typepass
+jmp setpointer
  ; set the pointr for comparing the password
-mov si, 0
-mov di, 0
+
+backspace:
+mov ah, 0x0E
+mov al, 0x08
+int 0x10
+mov al, ' '
+int 0x10
+mov al, 0x08
+int 0x10
+cmp cx, 8
+je stopcx
+inc cx
+dec di
+mov byte [di], 0
+
+stopcx:
+jmp typepass
+
+setpointer:
 mov si, buffer
 mov di, password
 
