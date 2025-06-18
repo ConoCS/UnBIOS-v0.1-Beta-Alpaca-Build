@@ -35,7 +35,7 @@ I use **QEMU** for testing (yes, I’m pampered 🍼), but I’d love it if some
 
 ---
 
-##🌟 What Will UnBIOS Look Like in the Future?
+## 🌟 What Will UnBIOS Look Like in the Future?
 
 There might be two different versions:
 
@@ -48,7 +48,7 @@ The goal is to make UnBIOS flexible and accessible to everyone — from retro en
 
 ---
 
-##🚀 When Will the UEFI Version of UnBIOS Be Released?
+## 🚀 When Will the UEFI Version of UnBIOS Be Released?
 
 Development will run in parallel with the ongoing UnBIOS v0.1 BETA - Alpaca RETRO Build.
 While I’m working on the 16-bit BIOS (which is the most fun part 😄), I’ll also be developing a 64-bit UEFI-compatible version — to support modern machines that require UEFI booting.
