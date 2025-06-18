@@ -1,4 +1,4 @@
-# UnBIOS v0.1 Beta | Alpaca Build 🦙
+# UnBIOS v0.1 Beta | Alpaca RETRO Build 🦙
 
 ---
 
@@ -32,6 +32,28 @@ Because I’m currently building and testing a traditional boot sector (MBR-styl
 Most BIOSes expect boot code to load at `0x7C00` and check for the `0xAA55` boot signature at the end.
 
 I use **QEMU** for testing (yes, I’m pampered 🍼), but I’d love it if someone tried this on real hardware or stricter emulators that don't auto-fix segment registers. Your feedback = 💎.
+
+---
+
+##🌟 What Will UnBIOS Look Like in the Future?
+
+There might be two different versions:
+
+UnBIOS v1.0 | RETRO Build
+
+UnBIOS v2.0 - v.60 | UEFI BIOS Build
+
+Each version will be tailored to ensure compatibility with both old and modern hardware.
+The goal is to make UnBIOS flexible and accessible to everyone — from retro enthusiasts to modern-day users, young and old alike.
+
+---
+
+##🚀 When Will the UEFI Version of UnBIOS Be Released?
+
+Development will run in parallel with the ongoing UnBIOS v0.1 BETA - Alpaca RETRO Build.
+While I’m working on the 16-bit BIOS (which is the most fun part 😄), I’ll also be developing a 64-bit UEFI-compatible version — to support modern machines that require UEFI booting.
+
+> Note: The UEFI build may also include CSM (Compatibility Support Module) for those who want to run legacy OSes freely.
 
 ---
 
